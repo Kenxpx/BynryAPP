@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h2>Support Dashboard</h2>
+    </div>
+    
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-3 dashboard-card">
+                <div class="card text-white bg-primary">
+                    <div class="card-body">
+                        <h5>Open Tickets</h5>
+                        <h1>{{ open_tickets }}</h1>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Request</th>
+                                    <th>Customer</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for ticket in tickets %}
+                                <tr>
+                                    <td>{{ ticket.request.title }}</td>
+                                    <td>{{ ticket.request.customer.email }}</td>
+                                    <td>
+                                        <span class="status-badge status-{{ ticket.status|lower }}">
+                                            {{ ticket.get_status_display }}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <a href="{% url 'support:ticket_detail' ticket.pk %}" 
+                                           class="btn btn-sm btn-outline-primary">
+                                            View
+                                        </a>
+                                    </td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="4" class="text-center">No active tickets</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

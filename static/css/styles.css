@@ -1,0 +1,58 @@
+:root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --success: #27ae60;
+    --danger: #e74c3c;
+    --warning: #f1c40f;
+}
+
+body {
+    padding-top: 4rem;
+    background-color: #f8f9fa;
+}
+
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.status-badge {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+}
+
+.status-open { background-color: var(--warning); }
+.status-in-progress { background-color: var(--secondary); }
+.status-resolved { background-color: var(--success); }
+
+.priority-low { color: var(--success); }
+.priority-medium { color: var(--warning); }
+.priority-high { color: var(--danger); }
+
+.attachment-card {
+    border-left: 4px solid var(--secondary);
+    transition: all 0.2s;
+}
+
+.attachment-card:hover {
+    background-color: #f8f9fa;
+    border-left-width: 6px;
+}
+
+@media (max-width: 768px) {
+    .dashboard-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Demo Tour Styles */
+.tour-highlight {
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.3);
+    border-radius: 4px;
+    transition: box-shadow 0.3s;
+}

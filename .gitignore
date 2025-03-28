@@ -1,0 +1,44 @@
+# Local development
+.env
+.env.local
+*.log
+*.sqlite3
+*.db
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Virtual Environment
+venv/
+env/
+.venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+
+# Build/Deployment
+dist/
+build/
+*.egg-info/
+.coverage
+htmlcov/
+*.mo
+*.pot
+
+# Database
+*.db-journal
+*.sql
+/db.sqlite3
+
+# Static files
+staticfiles/
+/media/
+
+# Docker
+docker-compose.override.yml
