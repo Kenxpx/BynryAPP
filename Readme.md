@@ -2,8 +2,8 @@
 
 A full-featured **Django + React** web application designed for a gas utility company to manage customer service requests efficiently. This platform allows users to submit, track, and manage service requests while providing customer support representatives with tools for effective resolution.
 
-## **Repository**
-GitHub: [BynryAPP](https://github.com/Kenxpx/BynryAPP.git)
+🔗 **Live Demo Web Version On Vercel:** [Gas Utility App UI](https://v0-django-gas-utility-app.vercel.app/)
+
 
 ---
 
